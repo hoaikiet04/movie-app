@@ -1,4 +1,7 @@
-function Header() {
+import PropTypes from "prop-types";
+import { useState } from "react";
+function Header({ onSearch }) {
+  const [textSearch, setSearch] = useState("");
   return (
     <>
       <div className="p-4 bg-black flex justify-between items-center ">
@@ -19,8 +22,19 @@ function Header() {
           </nav>
         </div>
         <div className="flex items-center space-x-4">
-          <input type="text" placeholder="Search" className="p-3  text-black" />
-          <button className="p-2 text-white bg-red-600">Search</button>
+          <input
+            type="text"
+            placeholder="Search"
+            className="p-3  text-black"
+            onChange={(e) => setSearch(e.target.value)}
+            value={textSearch}
+          />
+          <button
+            className="p-2 text-white bg-red-600"
+            onClick={() => onSearch(textSearch)}
+          >
+            Search
+          </button>
         </div>
       </div>
     </>
