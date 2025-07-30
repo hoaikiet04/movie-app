@@ -13,7 +13,7 @@ const Banner = () => {
           </p>
           <div className="flex flex-col space-y-4 z-20">
             <h2 className="text-white font-bold text-[40px]">
-              Nghe nói em thích tôi
+              DIÊN HY CÔNG LƯỢC
             </h2>
             <div className="flex items-center space-x-3">
               <img src={IconRating} alt="rating" className="w-8 h-8" />
